@@ -20,7 +20,7 @@ export default function Navbar() {
   }
 
   return (
-    <header className="w-full border-b">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur">
       <nav className="max-w-6xl mx-auto flex items-center justify-between p-4">
         
         {/* Logo / Avatar */}

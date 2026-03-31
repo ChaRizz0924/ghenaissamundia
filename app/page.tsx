@@ -5,11 +5,11 @@ import CredentialSection from "@/components/features/home/CredentialSection";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Navbar />
       <HeroSection />
       <CredentialSection />
       <Footer />
-    </div>
+    </>
   );
 }

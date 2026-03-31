@@ -11,7 +11,8 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className={`mb-8 ${align === "center" ? "text-center" : "text-left"}`}>
-      
+      <br></br>
+      <br></br>
       <h2 className="text-2xl md:text-3xl font-bold">
         {title}
       </h2>

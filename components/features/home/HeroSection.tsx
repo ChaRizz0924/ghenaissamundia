@@ -16,7 +16,7 @@ export default function HeroSection() {
       {/* LEFT */}
       <div>
         <h1 className="text-4xl md:text-5xl font-bold">
-          MUNDIA, <br /> Ghenai Marie J.
+          MUNDIA, <br /> Ghenaissa Marie J.
         </h1>
 
         <p className="mt-4 text-muted-foreground">

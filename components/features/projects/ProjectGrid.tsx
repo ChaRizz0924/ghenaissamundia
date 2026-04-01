@@ -9,7 +9,8 @@ export default function ProjectGrid() {
   const [search, setSearch] = useState("")
 
   const filtered = projects.filter((project) =>
-    project.title.toLowerCase().includes(search.toLowerCase())
+    project.title.toLowerCase().includes(search.toLowerCase()) ||
+    project.description.toLowerCase().includes(search.toLowerCase())
   )
 
   return (

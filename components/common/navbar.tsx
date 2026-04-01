@@ -40,6 +40,7 @@ export default function Navbar() {
           <Link href="/" className="hover:underline">Home</Link>
           <Link href="/about" className="hover:underline">About</Link>
           <Link href="/projects" className="hover:underline">Project</Link>
+          <Link href="/blog" className="hover:underline">Blog</Link>
 
           {/* Contact Button (boxed in your sketch) */}
           <Link href="/contact">

@@ -15,21 +15,21 @@ export default function HeroSection() {
       
       {/* LEFT */}
       <div>
-        <h1 className="text-4xl md:text-5xl font-bold">
+        <h1 className="text-7xl md:text-5xl font-bold">
           MUNDIA, <br /> Ghenaissa Marie J.
         </h1>
 
         <p className="mt-4 text-muted-foreground">
-          I am a web developer passionate about building modern applications.
+          I am a web developer passionate about building modern applications. I have experience in React, Next.js, and Node.js, and I enjoy creating user-friendly interfaces and efficient backends. I am always eager to learn new technologies and improve my skills. In my free time, I like to explore new frameworks, contribute to open-source projects, and write technical blogs. Feel free to explore my portfolio and get in touch if you&apos;d like to collaborate or learn more about my work!
         </p>
 
         <Button className="mt-10" onClick={scrollToCredentials}>
-          What's in my bag?
+          What&apos;s in my bag?
         </Button>
       </div>
 
       {/* RIGHT */}
-      <div className="relative w-100 h-100 md:h-100">
+      <div className="relative w-130 h-100 md:h-120">
         <Image
           src="/ghenai.jpg"
           alt="Hero"

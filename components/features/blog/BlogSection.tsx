@@ -15,7 +15,7 @@ export default function BlogSection({ filteredBlogs }: Props) {
   return (
     <>
         <Navbar />
-        <SectionHeader title="Blog" subtitle="Insights, stories, and updates from our team." />
+        <SectionHeader title="Personal Blog" subtitle="Insights, stories, and updates from Ghenaissa the Great." />
         <BlogFilters />
         <BlogList blogs={data} />
         <Footer />

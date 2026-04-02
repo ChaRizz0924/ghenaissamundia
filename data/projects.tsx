@@ -1,5 +1,3 @@
-import { link } from "fs";
-
 export const projects = [
   {
     slug: "mldv-website",

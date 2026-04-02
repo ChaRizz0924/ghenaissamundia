@@ -6,22 +6,17 @@ type Props = {
   title: string
   description: string
   image: string
-  category: string
-  date: string
 }
-
 export default function BlogCard({
   slug,
   title,
   description,
   image,
-  category,
-  date,
 }: Props) {
   return (
     <Link href={`/blog/${slug}`} className="group block">
       
-      <div className="relative w-full h-60   rounded-lg overflow-hidden border">
+      <div className="relative w-full h-80   rounded-lg overflow-hidden border">
         <Image
           src={image}
           alt={title}

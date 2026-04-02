@@ -1,8 +1,8 @@
-// components/features/blog/BlogFilters.tsx
 "use client"
 
 import Link from "next/link"
 import { useRouter } from "next/navigation"
+import { blogs } from "@/data/blogs"
 
 import {
   DropdownMenu,
@@ -21,15 +21,33 @@ import {
 
 import { Button } from "@/components/ui/button"
 
-const categories = ["tech", "programming"]
+// ✅ GET UNIQUE CATEGORIES
+const categories = [...new Set(blogs.map((b) => b.category))]
+
+// ✅ GET UNIQUE DATES
+const dates = blogs.map((b) => {
+  const d = new Date(b.date)
+
+  return {
+    year: d.getFullYear().toString(),
+    month: String(d.getMonth() + 1).padStart(2, "0"),
+    day: String(d.getDate()).padStart(2, "0"),
+    label: d.toDateString(),
+  }
+})
+
+// optional: remove duplicates
+const uniqueDates = Array.from(
+  new Map(dates.map((d) => [`${d.year}-${d.month}-${d.day}`, d])).values()
+)
 
 export default function BlogFilters() {
   const router = useRouter()
 
   return (
     <div className="flex flex-wrap gap-5 mb-10 max-w-6xl w-full mx-auto">
-      
-      {/* CATEGORY DROPDOWN */}
+
+      {/* CATEGORY */}
       <DropdownMenu>
         <DropdownMenuTrigger>
           <Button variant="outline">Filter by Category</Button>
@@ -46,26 +64,39 @@ export default function BlogFilters() {
         </DropdownMenuContent>
       </DropdownMenu>
 
-      {/* DATE DROPDOWN */}
+      {/* DATE */}
       <Select
         onValueChange={(value) => {
           router.push(`/blog/date/${value}`)
         }}
       >
-        <SelectTrigger className="w-50">
+        <SelectTrigger className="w-60">
           <SelectValue placeholder="Filter by Date" />
         </SelectTrigger>
 
         <SelectContent>
-          <SelectItem value="2026">2026</SelectItem>
-          <SelectItem value="2026/03">March 2026</SelectItem>
-          <SelectItem value="2026/03/25">March 25, 2026</SelectItem>
+          {/* YEAR */}
+          {[...new Set(dates.map((d) => d.year))].map((year) => (
+            <SelectItem key={year} value={year}>
+              {year}
+            </SelectItem>
+          ))}
+
+          {/* FULL DATE */}
+          {uniqueDates.map((d) => (
+            <SelectItem
+              key={`${d.year}-${d.month}-${d.day}`}
+              value={`${d.year}/${d.month}/${d.day}`}
+            >
+              {d.label}
+            </SelectItem>
+          ))}
         </SelectContent>
       </Select>
 
-      {/* RESET BUTTON */}
+      {/* RESET */}
       <Button
-        variant="ghost"
+        variant="outline"
         onClick={() => router.push("/blog")}
       >
         Reset

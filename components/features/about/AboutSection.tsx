@@ -1,5 +1,4 @@
 import StoryBlock from "./StoryBlock"
-import SectionHeader from "@/components/common/SectionHeader"
 
 export default function AboutStory() {
   return (

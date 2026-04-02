@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
 import SectionHeader from "@/components/common/SectionHeader"
-import { Button } from "@/components/ui/button"
 import ImageLinkCard from "@/components/common/ImageLinkCard"
 
 export default function CredentialsSection() {

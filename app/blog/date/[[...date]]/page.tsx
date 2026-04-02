@@ -2,23 +2,23 @@ import { blogs } from "@/data/blogs"
 import BlogSection from "@/components/features/blog/BlogSection"
 
 type Props = {
-  params: Promise<{ slug?: string[] }>
+  params: Promise<{ date?: string[] }>
 }
 
 export default async function DatePage({ params }: Props) {
-  const { slug } = await params
+  const { date } = await params
 
   let filtered = blogs
 
-  if (slug) {
-    const [year, month, day] = slug
+  if (date) {
+    const [year, month, day] = date
 
     filtered = blogs.filter((blog) => {
       const d = new Date(blog.date)
 
       if (year && d.getFullYear().toString() !== year) return false
-      if (month && (d.getMonth() + 1).toString() !== month) return false
-      if (day && d.getDate().toString() !== day) return false
+      if (month && String(d.getMonth() + 1).padStart(2, "0") !== month) return false
+      if (day && String(d.getDate()).padStart(2, "0") !== day) return false
 
       return true
     })

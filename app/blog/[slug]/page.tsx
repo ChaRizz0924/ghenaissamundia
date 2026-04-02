@@ -1,6 +1,7 @@
 import { blogs } from "@/data/blogs"
 import { notFound } from "next/navigation"
 import Image from "next/image"
+import Link from "next/link"
 
 
 type Props = {
@@ -17,7 +18,11 @@ export default async function BlogDetail({ params }: Props) {
   return (
     <section className="max-w-3xl mx-auto px-6 py-16">
       
-      <h1 className="text-3xl font-bold mb-6">
+      <Link href="/blog" className="text-sm underline">
+        ← Back to Blog
+      </Link>
+
+      <h1 className="text-3xl font-bold mb-6 py-4">
         {blog.title}
       </h1>
 

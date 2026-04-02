@@ -1,7 +1,6 @@
 import Navbar from "@/components/common/navbar";
 import Footer from "@/components/common/footer";
 import ContactHero from "@/components/features/contact/ContactHero";
-import ContactForm from "@/components/features/contact/ContactForm";
 import ContactGrid from "@/components/features/contact/ContactGrid";
 import SectionHeader from "@/components/common/SectionHeader";
 

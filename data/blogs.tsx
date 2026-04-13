@@ -26,5 +26,15 @@ export const blogs = [
     category: "self",
     date: "2026-04-02",
   },
+    {
+    slug: "random-thoughts",
+    title: "Thinking about everything randomly.",
+    description: "There's no specific topic, just random thoughts about everything.",
+    content: "Sometimes, I wonder what if was born in a different era, or what if I had chosen a different path in life. The possibilities are endless, and it's fascinating to think about how different choices could have led to entirely different outcomes. I also find myself pondering the nature of reality and how our perceptions shape our understanding of the world. It's interesting to consider how our thoughts and beliefs influence our actions and interactions with others. In this blog, I'll share some of my random thoughts on various topics, from philosophy to technology, and everything in between. It's a space for me to explore ideas and share insights without any specific agenda or focus. So, if you're interested in hearing some random musings and reflections on life, stay tuned for more posts in this series.",
+    image: "/yellow.jpg",
+    category: "creative mind",
+    date: "2026-04-02",
+  },
+
   
 ]

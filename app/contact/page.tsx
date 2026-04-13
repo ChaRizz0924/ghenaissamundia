@@ -11,7 +11,7 @@ export default function Contact() {
     <>
         <Navbar />
         <ContactHero />
-        <SectionHeader title="Get in Touch" subtitle="More ways to connect with me. Let's be friends and talk business wih me!" />
+        <SectionHeader title="Get in Touch" subtitle="More ways to connect with me. Let's be friends and talk business with me!" />
         <ContactGrid />
         <Footer />
     </>
